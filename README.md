@@ -6,6 +6,8 @@ Model Price Radar pulls live pricing for 19 frontier AI models from OpenRouter, 
 
 Model Price Radar 从 OpenRouter 拉取 19 个前沿 AI 模型的实时价格，并从 Hacker News（社区）+ 各公司官方 RSS（官方）交叉验证每个被追踪来源的 Top 3 新闻。每 6 小时更新。部署为 GitHub Pages 静态站点。
 
+[![CI](https://github.com/w1977-0/model-price-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/w1977-0/model-price-radar/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![Updated](https://img.shields.io/badge/updated-every%206h-blue.svg)
+
 ---
 
 ## What's tracked

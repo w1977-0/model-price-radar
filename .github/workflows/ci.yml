@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Every data file parses
+        run: |
+          for f in data/*.json; do
+            python -m json.tool "$f" > /dev/null || { echo "not valid JSON: $f"; exit 1; }
+            echo "ok  $f"
+          done
+      - name: Page still matches the data it was built from
+        # cron-stub.sh rebuilds index.html after each fetch; if a run commits
+        # new data without rebuilding, the published page silently drifts.
+        run: |
+          python scripts/build.py
+          git diff --exit-code -- index.html
