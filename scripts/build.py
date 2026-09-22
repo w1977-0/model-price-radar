@@ -269,7 +269,7 @@ def render_header(pricing: dict) -> str:
     return f"""
 <header class="site-header">
   <div class="brand">
-    <h1>AI Radar</h1>
+    <h1>Model Price Radar</h1>
     <span class="tagline">Frontier model pricing &amp; AI company news.</span>
   </div>
   <nav>
@@ -450,7 +450,7 @@ def main() -> int:
         "<head>",
         '<meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        "<title>AI Radar — frontier model pricing & AI company news</title>",
+        "<title>Model Price Radar — frontier model pricing & AI company news</title>",
         '<meta name="description" content="AI API pricing & news tracker · 20 frontier models + 12 AI companies, cross-validated via Hacker News + RSS. Updated every 6 hours.">',
         "<style>" + CSS + "</style>",
         "</head>",

@@ -14,7 +14,7 @@ Auth: x-api-key header (token in ~/.hermes/.env as AA_API_KEY)
 Attribution: https://artificialanalysis.ai/  (required by their terms)
 Rate limit: 1000 requests/day (free tier)
 
-We fuzzy-match AA's model names against our 20 OpenRouter-tracked models and
+We fuzzy-match AA's model names against our OpenRouter-tracked models and
 emit only the matches. Fuzzy match uses 3 strategies in priority order:
 1. Slug normalization: 'claude-fable-5' ↔ 'anthropic/claude-fable-5'
 2. Name normalization: strip '(high|medium|low|xhigh|max)' tier suffixes

@@ -1,5 +1,5 @@
 #!/bin/bash
-# cron-stub.sh — Main entry point for ai-radar periodic update.
+# cron-stub.sh — Main entry point for model-price-radar periodic update.
 #
 # Usage:
 #   ./cron-stub.sh            # full run (fetch + detect + build + push if changed)
@@ -76,7 +76,7 @@ fi
 trap release_lock EXIT
 
 START_TS=$(date +%s)
-log "=== ai-radar cron run start (dry_run=$DRY_RUN) ==="
+log "=== model-price-radar cron run start (dry_run=$DRY_RUN) ==="
 
 # --- 1. Fetch ---
 if [ "$SKIP_FETCH" != "true" ]; then
